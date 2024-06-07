@@ -182,8 +182,25 @@
       </div>
     </section>
 
-    <!-- Connect to me section -->
+    <!-- Send me messages-->
+
     <section id="connect">
+      <form
+        method="post"
+        action="https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec"
+        name="contact-form"
+      >
+        <h2>Connect !</h2>
+        <input type="text" name="Name" placeholder="Name" />
+        <input type="text" name="Number" placeholder="Number" />
+        <input type="email" name="Email" placeholder="Email" />
+        <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </section>
+
+    <!-- Connect to me section -->
+    <section id="">
       <ul class="social-icons">
         <li>
           <a href="https://www.instagram.com/kya_kre_prabhi" target="_blank">
@@ -213,8 +230,23 @@
       </ul>
     </section>
   </body>
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
+
+    const form = document.forms["contact-form"];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) =>
+          alert("Thank you! your form is submitted successfully.")
+        )
+        .then(() => {
+          window.location.reload();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
   <script src="script.js"></script>
-  <script src="https://apis.google.com/js/api.js" async defer>
-    /* Script to handle form submission goes here */
-</script>
 </html>
