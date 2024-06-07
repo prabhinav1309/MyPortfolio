@@ -7,6 +7,16 @@ body {
   font-family: "Poppins";
 }
 
+* {
+  margin: 0;
+  background-color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/******************* media queries ********************/
+
 /******************* navbar ***************************/
 .navbar {
   display: flex;
@@ -192,11 +202,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.project:hover h3{
+.project:hover h3 {
   color: black;
 }
 
-.project:hover .project-icon{
+.project:hover .project-icon {
   color: #000;
 }
 
@@ -232,4 +242,63 @@ h2 {
 .social-icons li a:hover .icon {
   transform: scale(1.2); /* Scale the icon on hover */
   color: #000;
+}
+
+/* form section */
+
+section#connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 0px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Style the form title */
+section#connect h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: grey;
+}
+
+/* Style the input fields */
+section#connect input[type="text"],
+section#connect input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the textarea */
+section#connect textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 100px;
+}
+
+/* Style the submit button */
+section#connect input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(113, 113, 113);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the submit button */
+section#connect input[type="submit"]:hover {
+  background-color: rgb(55, 55, 55);
 }
