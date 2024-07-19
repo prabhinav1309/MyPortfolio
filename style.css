@@ -336,8 +336,8 @@ section#connect input[type="submit"]:hover {
   }
 
   .home-content h1 {
-    padding-left: 20px;
-    padding-right: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
     text-align: justify;
     font-size: 1.8rem;
   }
