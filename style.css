@@ -1,21 +1,14 @@
+/* General Styles */
 * {
   margin: 0;
-  background-color: white;
-}
-
-body {
-  font-family: "Poppins";
-}
-
-* {
-  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: white;
 }
 
 body {
   font-family: "Poppins", sans-serif;
 }
-/******************* media queries ********************/
 
 /******************* navbar ***************************/
 .navbar {
@@ -49,6 +42,7 @@ body {
   overflow: hidden;
   animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
+
 @keyframes typing {
   from {
     width: 0;
@@ -57,6 +51,7 @@ body {
     width: 100%;
   }
 }
+
 @keyframes blink-caret {
   from,
   to {
@@ -78,6 +73,14 @@ body {
   transform: translateY(20px);
   animation: fadeInUp 2s ease-in-out forwards;
 }
+
+.animated-image-hello {
+  font-size: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -301,4 +304,105 @@ section#connect input[type="submit"] {
 /* Add hover effect to the submit button */
 section#connect input[type="submit"]:hover {
   background-color: rgb(55, 55, 55);
+}
+
+/****************** Media Queries ********************/
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar{
+    padding: 10px 0;
+  }
+  .unorder-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    padding: 2px;
+  }
+
+  .list a {
+    padding: 10px 15px;
+  }
+
+  /* Introduction */
+  .home-content {
+    padding: 50px;
+    text-align: justify;
+    font-size: 0.7rem;
+  }
+
+  .home-content .animated-image-hello {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .home-content h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 1.8rem;
+  }
+
+  .home-img {
+    display: none; /* Hide image on mobile */
+  }
+
+  /* Skills Section */
+  .skill {
+    font-size: 0.7rem;
+    width: calc(33.333% - 2em); /* Three skills in one row */
+    animation: fadeIn 0.5s ease-in-out forwards; /* New animation */
+  }
+
+  .skill i {
+    opacity: 1; /* Initially set opacity to 0 */
+  }
+  
+
+  /* Projects Section */
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 95%; /* Make each project take up the full width */
+    margin: 20px auto;
+    height: auto;
+    padding: 20px;
+  }
+
+  .project h3 {
+    font-size: 1.1rem;
+  }
+
+  .project p {
+    font-size: 0.7rem;
+    text-align: justify;
+  }
+
+  /* Form Section */
+  section#connect {
+    width: 90%;
+  }
+
+  /* Social Icons */
+  .social-icons {
+    flex-direction: row; /* Keep social icons horizontal */
+    justify-content: center; /* Center the icons */
+  }
+
+  .social-icons li {
+    margin: 10px 5px; /* Adjust margin for horizontal layout */
+  }
+}
+
+/* Additional animation for skills */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
