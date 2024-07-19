@@ -355,6 +355,19 @@ section#connect input[type="submit"]:hover {
 
   .skill i {
     opacity: 1; /* Initially set opacity to 0 */
+    animation: flip 3s infinite;
+  }
+
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
   }
   
 
