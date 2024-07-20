@@ -8,12 +8,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  padding-top: 60px;
 }
 
 /******************* navbar ***************************/
 .navbar {
   display: flex;
   justify-content: center;
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Position it at the top of the viewport */
+  width: 100%; /* Make it span the full width of the viewport */
+  background-color: rgb(255, 255, 255); /* Ensure it has a background color */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .unorder-list {
@@ -309,7 +315,7 @@ section#connect input[type="submit"]:hover {
 /****************** Media Queries ********************/
 @media (max-width: 768px) {
   /* Navbar */
-  .navbar{
+  .navbar {
     padding: 10px 0;
   }
   .unorder-list {
@@ -336,8 +342,8 @@ section#connect input[type="submit"]:hover {
   }
 
   .home-content h1 {
-    /*padding-left: 20px;
-    padding-right: 20px;*/
+    /* padding-left: 20px;
+    padding-right: 20px; */
     text-align: justify;
     font-size: 1.8rem;
   }
@@ -369,7 +375,6 @@ section#connect input[type="submit"]:hover {
       transform: rotateY(360deg);
     }
   }
-  
 
   /* Projects Section */
   .project-row {
