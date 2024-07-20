@@ -230,30 +230,34 @@
       </ul>
     </section>
   </body>
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
 
-  const form = document.forms["contact-form"];
+    const form = document.forms["contact-form"];
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        if (response.ok) {
-          alert("Thank you! Your form has been submitted successfully.");
-          form.reset(); // Clear the form fields
-          // Optionally, redirect to another page or section
-          // window.location.href = "/thank-you.html";
-        } else {
-          alert("Sorry, there was a problem with your submission. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error!", error.message);
-        alert("Sorry, there was an error. Please try again later.");
-      });
-  });
-</script>
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          if (response.ok) {
+            alert("Thank you! Your form has been submitted successfully.");
+            form.reset(); // Clear the form fields
+            // Optionally, redirect to another page or section
+            // window.location.href = "/thank-you.html";
+          } else {
+            alert(
+              "Sorry, there was a problem with your submission. Please try again."
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+          alert("Sorry, there was an error. Please try again later.");
+        });
+    });
+  </script>
+
   <script src="script.js"></script>
 </html>
