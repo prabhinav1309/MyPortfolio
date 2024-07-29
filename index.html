@@ -1,263 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prabhinav Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- ******************************************************************************************** -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montez&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
+    <title>Prabhinav Mishra</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <!-- navbar section -->
-    <nav class="navbar" id="home">
-      <div class="items">
-        <ul class="unorder-list">
-          <li class="list">
-            <a href="#">Home</a>
-          </li>
-          <li class="list">
-            <a
-              href="https://docs.google.com/document/d/14G1wJvvPLR48uAVe1ofjZAfpF0sJmCAhf136huOkyrE/edit?usp=sharing"
-              target="_blank"
-              >Resume</a
-            >
-          </li>
-          <li class="list">
-            <a href="#skills">Skills</a>
-          </li>
-          <li class="list">
-            <a href="#projects">Projects</a>
-          </li>
-          <li class="list">
-            <a href="#connect">Contact</a>
-          </li>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="#">Prabhiii.</a></div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
         </ul>
+        <div class="media-icons">
+          <a href="mailto:prabhi.codes@gmail.com" target="_blank"
+            ><i class="fas fa-envelope icon"></i
+          ></a>
+          <a href="https://twitter.com/kya_kre_prabhi" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/kya_kre_prabhi" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/prabhinav1309" target="_blank"
+            ><i class="fab fa-linkedin icon"></i
+          ></a>
+          <a href="https://github.com/prabhinav1309" target="_blank"
+            ><i class="fab fa-github icon"></i
+          ></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
     </nav>
 
-    <!-- introduction section -->
-    <div class="introduction">
-      <div class="row">
-        <div class="col-lg-6 home-content">
-          <p class="animated-image-hello">Hello,</p>
-          <br />
-          <h1 class="typing-effect">I'm <span>P</span>rabhinav Mishra.</h1>
-          <br />
-          <p class="animated-image">
-            I'm a third-year Computer Science student and coding enthusiast.
-            When I'm not turning coffee into code, I'm creating sleek web
-            applications with JavaScript and React. Dive into my portfolio and
-            see how I blend tech and creativity to build cool stuff!
-          </p>
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-one">Hello,</div>
+          <div class="text-two">I'm Prabhinav Mishra.</div>
+          <div class="text-three">FrontEnd Developer</div>
+          <!-- <div class="text-four">
+            <p></p>
+          </div> -->
         </div>
-        <div class="col-lg-6 home-img">
-          <img class="animated-image" src="images/myimgbg.png" alt="woopsie" />
-        </div>
-      </div>
-    </div>
-    <br />
-    <br />
-    <br />
-
-    <!-- skills section -->
-    <section id="skills">
-      <div class="skills-container">
-        <div class="skill">
-          <i class="fas fa-code"></i>
-          <span style="color: grey">C</span>
-        </div>
-        <div class="skill">
-          <i class="fas fa-code"></i>
-          <span style="color: grey">C++</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-python"></i>
-          <span style="color: grey">Python</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-html5"></i>
-          <span style="color: grey">HTML</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-css3-alt"></i>
-          <span style="color: grey">CSS</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-js"></i>
-          <span style="color: grey">JavaScript</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-bootstrap"></i>
-          <span style="color: grey">Bootstrap</span>
-        </div>
-        <div class="skill">
-          <i class="fas fa-code"></i>
-          <span style="color: grey">jQuery</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-react"></i>
-          <span style="color: grey">React.js</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-git-alt"></i>
-          <span style="color: grey">Git</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-github"></i>
-          <span style="color: grey">GitHub</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-figma"></i>
-          <span style="color: grey">Figma</span>
-        </div>
-      </div>
-    </section>
-    <br />
-    <br />
-    <br />
-    <!-- project section -->
-
-    <section id="projects">
-      <div class="project-row">
-        <div class="project">
-          <i class="fas fa-home project-icon"></i>
-          <h3>Rental House Administration Platform</h3>
-          <p>
-            Developed a user-friendly rental house management system allowing
-            users to browse properties, view images, and contact owners
-            directly. Streamlined the property rental process and enhanced user
-            satisfaction.
-          </p>
-        </div>
-        <div class="project">
-          <i class="fas fa-chart-line project-icon"></i>
-          <h3>Climate Analysis & Link to Human Health</h3>
-          <p>
-            Analyzed climate data and its impact on human health. Identified
-            correlations between climate changes and health effects. Contributed
-            to research, data mining, UML diagram creation, and machine
-            learning, resulting in a framework aiding public health policy.
-          </p>
-        </div>
-      </div>
-      <div class="project-row">
-        <div class="project">
-          <i class="fas fa-hospital project-icon"></i>
-          <h3>Blockchain Integrated EHR</h3>
-          <p>
-            Developed an electronic health record system with blockchain
-            integration for secure patient data management. Worked on front-end
-            design, back-end development, and blockchain implementation using
-            Ganache and MetaMask, enhancing data integrity and privacy.
-          </p>
-        </div>
-        <div class="project">
-          <i class="fas fa-microphone project-icon"></i>
-          <h3>TEDxABESEC 2024 Website</h3>
-          <p>
-            Created a dynamic and responsive website for the TEDxABESEC college
-            event using HTML, CSS, JavaScript, and Bootstrap. The website
-            featured an elegant design with user-friendly navigation, showcasing
-            event details, speaker profiles, and an interactive schedule.
-          </p>
+        <div class="button">
+          <a
+            href="https://docs.google.com/document/d/14G1wJvvPLR48uAVe1ofjZAfpF0sJmCAhf136huOkyrE/edit?usp=sharing"
+            target="_blank"
+            ><button>Resume</button></a
+          >
         </div>
       </div>
     </section>
 
-    <!-- Send me messages-->
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="images/about.png" alt="" />
+          </div>
+          <div class="right">
+            <div class="topic">I will see you at the movies.</div>
+            <p>
+              I'm a third-year Computer Science student and a passionate coding
+              enthusiast. When I'm not turning coffee into code, I'm busy
+              crafting sleek and dynamic web applications using JavaScript and
+              React. My journey in tech is driven by a love for problem-solving
+              and an insatiable curiosity for new technologies.<br />
 
-    <section id="connect">
-      <form
-        method="post"
-        action="https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec"
-        name="contact-form"
-      >
-        <h2>Connect !</h2>
-        <input type="text" name="Name" placeholder="Name" />
-        <input type="text" name="Number" placeholder="Number" />
-        <input type="email" name="Email" placeholder="Email" />
-        <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
-        <input type="submit" value="Submit" id="submit" />
-      </form>
+              In my spare time, I delve into various coding projects, exploring
+              the latest trends in web development and continuously honing my
+              skills. My portfolio showcases a diverse range of projects where I
+              blend technology and creativity to build innovative solutions that
+              are not only functional but also aesthetically pleasing.<br />
+
+              Beyond the screen, I'm a cinephile with a deep appreciation for
+              the art of filmmaking. Whether it's classic cinema or the latest
+              blockbusters, I enjoy exploring different genres and drawing
+              inspiration from the storytelling and visual effects.
+            </p>
+            <!-- <div class="button">
+              <button>Download CV</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Connect to me section -->
-    <section id="">
-      <ul class="social-icons">
-        <li>
-          <a href="https://www.instagram.com/kya_kre_prabhi" target="_blank">
-            <i class="fab fa-instagram icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/prabhinav1309" target="_blank">
-            <i class="fab fa-linkedin icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/prabhinav1309" target="_blank">
-            <i class="fab fa-github icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:prabhi.codes@gmail.com">
-            <i class="fas fa-envelope icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/kya_kre_prabhi" target="_blank">
-            <i class="fab fa-twitter icon"></i>
-          </a>
-        </li>
-      </ul>
+    <!-- My Skill Section Start -->
+    <!-- Section Tag and Other Div will same where we need to put same CSS -->
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title"><span>My Skills</span></div>
+        <div class="skills-details">
+          <div class="boxes">
+            <div class="box">
+              <div class="per"><i class="fas fa-code"></i></div>
+              <div class="topic">C</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fas fa-code"></i></div>
+              <div class="topic">C++</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-python"></i></div>
+              <div class="topic">Python</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-html5"></i></div>
+              <div class="topic">HTML</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-css3-alt"></i></div>
+              <div class="topic">CSS</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-js"></i></div>
+              <div class="topic">JS</div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-details">
+          <div class="boxes">
+            <div class="box">
+              <div class="per"><i class="fab fa-bootstrap"></i></div>
+              <div class="topic">Bootstrap</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fas fa-code"></i></div>
+              <div class="topic">jQuery</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-react"></i></div>
+              <div class="topic">React.js</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-git-alt"></i></div>
+              <div class="topic">Git</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-github"></i></div>
+              <div class="topic">GitHub</div>
+            </div>
+            <div class="box">
+              <div class="per"><i class="fab fa-figma"></i></div>
+              <div class="topic">Figma</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- My Services Section Start -->
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title"><span>My Projects</span></div>
+        <div class="boxes">
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-home project-icon"></i>
+            </div>
+            <div class="topic">Rental House Administration Platform</div>
+            <p>
+              Developed a user-friendly rental house management system allowing
+              users to browse properties, view images, and contact owners
+              directly. Streamlined the property rental process and enhanced
+              user satisfaction.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-chart-line project-icon"></i>
+            </div>
+            <div class="topic">Climate Analysis & Link to Human Health</div>
+            <p>
+              Analyzed climate data and its impact on human health. Identified
+              correlations between climate changes and health effects.
+              Contributed to research, data mining, UML diagram creation, and
+              machine learning, resulting in a framework aiding public health
+              policy.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-hospital project-icon"></i>
+            </div>
+            <div class="topic">Blockchain Integrated EHR</div>
+            <p>
+              Developed an electronic health record system with blockchain
+              integration for secure patient data management. Worked on
+              front-end design, back-end development, and blockchain
+              implementation using Ganache and MetaMask, enhancing data
+              integrity and privacy.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-microphone project-icon"></i>
+            </div>
+            <div class="topic">TEDxABESEC 2024 Website</div>
+            <p>
+              Created a dynamic and responsive website for the TEDxABESEC
+              college event using HTML, CSS, JavaScript, and Bootstrap. The
+              website featured an elegant design with user-friendly navigation,
+              showcasing event details, speaker profiles, and an interactive
+              schedule.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-solid fa-user-tie"></i>
+            </div>
+            <div class="topic">Prabhinav's Portfolio</div>
+            <p>
+              Developed a dynamic and responsive personal portfolio. The
+              portfolio features an elegant design with intuitive navigation,
+              showcasing my skills, projects, and experience. I focused on
+              creating a seamless user experience, ensuring the site is visually
+              appealing and highly functional.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-tablet-alt"></i>
+            </div>
+            <div class="topic">Coming Soon</div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me section Start -->
+    <section class="contact connect" id="contact">
+      <div class="content">
+        <div class="title"><span>Contact Me</span></div>
+          <form
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec"
+            name="contact-form"
+          >
+            <input type="text" name="Name" placeholder="Name" />
+            <input type="text" name="Number" placeholder="Number" />
+            <input type="email" name="Email" placeholder="Email" />
+            <textarea
+              name="Message"
+              rows="7"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Submit" id="submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="text">
+        <span
+          >Created By <a href="#">Prabhinav Mishra</a> | &#169; 2024 All Rights
+          Reserved</span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
-  <script>
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
-
-    const form = document.forms["contact-form"];
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        .then((response) => {
-          if (response.ok) {
-            alert("Thank you! Your form has been submitted successfully.");
-            form.reset(); // Clear the form fields
-            // Optionally, redirect to another page or section
-            // window.location.href = "/thank-you.html";
-          } else {
-            alert(
-              "Sorry, there was a problem with your submission. Please try again."
-            );
-          }
-        })
-        .catch((error) => {
-          console.error("Error!", error.message);
-          alert("Sorry, there was an error. Please try again later.");
-        });
-    });
-  </script>
-
-  <script src="script.js"></script>
 </html>
