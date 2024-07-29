@@ -3,41 +3,40 @@ let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
 console.log(scrollBtn);
 let val;
-window.onscroll = function() {
-  if(document.documentElement.scrollTop > 20){
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
     nav.classList.add("sticky");
     scrollBtn.style.display = "block";
-  }else{
+  } else {
     nav.classList.remove("sticky");
     scrollBtn.style.display = "none";
   }
-
-}
+};
 
 // Side NavIgation Menu JS Code
 let body = document.querySelector("body");
 let navBar = document.querySelector(".navbar");
 let menuBtn = document.querySelector(".menu-btn");
 let cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = function(){
+menuBtn.onclick = function () {
   navBar.classList.add("active");
   menuBtn.style.opacity = "0";
   menuBtn.style.pointerEvents = "none";
   body.style.overflow = "hidden";
   scrollBtn.style.pointerEvents = "none";
-}
-cancelBtn.onclick = function(){
+};
+cancelBtn.onclick = function () {
   navBar.classList.remove("active");
   menuBtn.style.opacity = "1";
   menuBtn.style.pointerEvents = "auto";
   body.style.overflow = "auto";
   scrollBtn.style.pointerEvents = "auto";
-}
+};
 
 // Side Navigation Bar Close While We Click On Navigation Links
 let navLinks = document.querySelectorAll(".menu li a");
 for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click" , function() {
+  navLinks[i].addEventListener("click", function () {
     navBar.classList.remove("active");
     menuBtn.style.opacity = "1";
     menuBtn.style.pointerEvents = "auto";
@@ -56,3 +55,32 @@ const resetTypingEffect = () => {
 
 // Set an interval to reset the animation every 3 seconds (adjust as needed)
 setInterval(resetTypingEffect, 3000);
+
+//FORM
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
+
+const form = document.forms["contact-form"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      if (response.ok) {
+        alert("Thank you! Your form has been submitted successfully.");
+        form.reset(); // Clear the form fields
+        // Optionally, redirect to another page or section
+        // window.location.href = "/thank-you.html";
+      } else {
+        alert(
+          "Sorry, there was a problem with your submission. Please try again."
+        );
+      }
+    })
+    .catch((error) => {
+      console.error("Error!", error.message);
+      alert("Sorry, there was an error. Please try again later.");
+    });
+});
