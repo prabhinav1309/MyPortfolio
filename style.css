@@ -424,11 +424,11 @@ section.connect input[type="submit"]:hover {
 /* Footer CSS */
 footer {
   background: #4070f4;
-  padding: 15px 0;
+  padding: 10px 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
-footer .text span {
+/* footer .text span {
   font-size: 17px;
   font-weight: 400;
   color: #fff;
@@ -439,6 +439,25 @@ footer .text span a {
 }
 footer .text span a:hover {
   text-decoration: underline;
+} */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  
+}
+.social-icons li {
+  margin: 10px;
+}
+footer .icon {
+  font-size: 2rem;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons li a:hover .icon {
+  transform: scale(1.2); /* Scale the icon on hover */
+  color: #ffffff;
 }
 
 /* Scroll TO Top Button CSS */
@@ -498,7 +517,7 @@ footer .text span a:hover {
     position: fixed;
     left: -100%;
     top: 0;
-    background: #0e2431;
+    background: #4070f4;;
     height: 100vh;
     max-width: 400px;
     width: 100%;
@@ -527,10 +546,10 @@ footer .text span a:hover {
     display: block;
   }
   .home .text-two {
-    font-size: 50px;
+    font-size: 45px;
   }
   .home .text-three {
-    font-size: 35px;
+    font-size: 25px;
   }
   .skills .skills-details {
     align-items: center;
@@ -538,7 +557,7 @@ footer .text span a:hover {
     flex-direction: column;
   }
   .skills-details .text {
-    width: 100%;
+    width: 50%;
     margin-bottom: 50px;
   }
   .skills-details .boxes {
@@ -546,7 +565,13 @@ footer .text span a:hover {
     align-items: center;
     width: 100%;
   }
-
+  .skills-details .boxes .per {
+    font-size: 40px;
+    color: #4070f4;
+  }
+  #skills .topic{
+    font-size: 15px;
+  }
   .services .boxes .box {
     margin: 20px 0;
     width: 100%;
@@ -564,13 +589,16 @@ footer .text span a:hover {
     background: none;
   }
   .home .text-two {
-    font-size: 40px;
+    font-size: 35px;
   }
   .home .text-three {
-    font-size: 33px;
+    font-size: 25px;
   }
   .skills-details .boxes .per {
-    font-size: 50px;
+    font-size: 30px;
     color: #4070f4;
+  }
+  #skills .topic{
+    font-size: 11px;
   }
 }
