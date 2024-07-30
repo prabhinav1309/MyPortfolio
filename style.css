@@ -63,7 +63,7 @@ nav .navbar .menu li {
 .navbar .menu a {
   font-size: 18px;
   font-weight: 500;
-  color: #0e2431;
+  color: #0a2331;
   padding: 6px 0;
   transition: all 0.4s ease;
 }
@@ -232,16 +232,19 @@ section .title span::after {
   transform: translateX(-50%);
 }
 .about .about-details .left {
-  width: 45%;
+  width: 40%;
 }
 .about .left img {
-  height: 440px;
-  width: 400px;
+  height: 400px;
+  width: 350px;
   object-fit: cover;
   border-radius: 12px;
 }
 .about-details .right {
-  width: 55%;
+  width: 60%;
+}
+#about .topic{
+  font-size: 35px;
 }
 section .topic {
   color: #0e2431;
@@ -250,6 +253,7 @@ section .topic {
   margin-bottom: 10px;
 }
 .about-details .right p {
+  font-size: 17px;
   text-align: justify;
   color: #0e2431;
 }
@@ -599,6 +603,7 @@ footer .icon {
 @media (max-width: 500px) {
   .home {
     background: none;
+    height: 100vh;
   }
   .home .text-two {
     font-size: 35px;
@@ -612,5 +617,15 @@ footer .icon {
   }
   #skills .topic {
     font-size: 11px;
+  }
+  #about .topic{
+    font-size: 30px;
+  }
+  .about-details .right p {
+    font-size: 14px;
+  }
+  .about .left img {
+    height: 350px;
+    width: 300px;
   }
 }
