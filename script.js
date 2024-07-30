@@ -60,19 +60,19 @@ setInterval(resetTypingEffect, 3000);
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyW1LIH0nol9Msyu23GX0tbJdSq3Wmcm9YabCaTXfAGOPwWTsxP05V2BoM7VjFt454ujA/exec";
-
 const form = document.forms["contact-form"];
+const spinner = document.getElementById("spinner");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  spinner.style.display = "inline-block"; // Show the spinner
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
+      spinner.style.display = "none"; // Hide the spinner
       if (response.ok) {
         alert("Thank you! Your form has been submitted successfully.");
         form.reset(); // Clear the form fields
-        // Optionally, redirect to another page or section
-        // window.location.href = "/thank-you.html";
       } else {
         alert(
           "Sorry, there was a problem with your submission. Please try again."
@@ -80,6 +80,7 @@ form.addEventListener("submit", (e) => {
       }
     })
     .catch((error) => {
+      spinner.style.display = "none"; // Hide the spinner
       console.error("Error!", error.message);
       alert("Sorry, there was an error. Please try again later.");
     });
