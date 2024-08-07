@@ -85,3 +85,37 @@ form.addEventListener("submit", (e) => {
       alert("Sorry, there was an error. Please try again later.");
     });
 });
+
+// Dark mode toggle functionality
+const toggleButton = document.getElementById("dark-mode-toggle");
+const bodys = document.body;
+
+// Function to update the icon
+function updateIcon() {
+  const icon = toggleButton.querySelector("i");
+  if (body.classList.contains("dark-mode")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+}
+
+// Load user's dark mode preference from localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+  bodys.classList.add("dark-mode");
+  updateIcon();
+}
+
+toggleButton.addEventListener("click", () => {
+  bodys.classList.toggle("dark-mode");
+  updateIcon();
+
+  // Save the user's preference to localStorage
+  if (bodys.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.removeItem("darkMode");
+  }
+});
