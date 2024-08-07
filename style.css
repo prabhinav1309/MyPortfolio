@@ -526,6 +526,9 @@ footer .icon {
   .home {
     background: none;
   }
+  body.dark-mode #home{
+    background: none;
+  }
   nav .navbar {
     width: 90%;
   }
@@ -605,6 +608,9 @@ footer .icon {
     background: none;
     height: 100vh;
   }
+  body.dark-mode #home{
+    background: none;
+  }
   .home .text-two {
     font-size: 35px;
   }
@@ -628,4 +634,131 @@ footer .icon {
     height: 350px;
     width: 300px;
   }
+}
+
+/* DARK MODE STYLES */
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Navbar Styles */
+body.dark-mode .navbar .menu a{
+  color: white;
+}
+
+/* Home Section */
+body.dark-mode .home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background_img_black.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body.dark-mode .home .home-content .text .text-one{
+  color: white;
+}
+body.dark-mode .home .home-content .text .text-two{
+  color: white;
+}
+
+/* About Section */
+body.dark-mode .about-content {
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode .about .content .title span{
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode .about .content .topic {
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode .about .content p {
+  background-color: #000000;
+  color: white;
+}
+
+/* Skills Section */
+body.dark-mode #skills {
+  background-color: #000000;
+  color: white;
+}
+
+body.dark-mode .skills {
+  background-color: #000000;
+  color: white;
+}
+
+body.dark-mode .skills span {
+  color: white;
+}
+
+/* Projects Section */
+body.dark-mode #services {
+  background-color: #000000;
+  color: white;
+}
+
+body.dark-mode .services {
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode .services .title span{
+  background-color: #000000;
+  color: white;
+}
+
+body.dark-mode .services .topic {
+  color: white;
+}
+
+body.dark-mode .services p {
+  color: white;
+}
+
+/* Connect Section */
+body.dark-mode #contact {
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode #contact .title span{
+  background-color: #000000;
+  color: white;
+}
+
+body.dark-mode #contact form input[type="text"],
+body.dark-mode #contact form input[type="email"],
+body.dark-mode #contact form textarea {
+  background-color: #000000;
+  color: white;
+  border: 1px solid #ffffff;
+}
+body.dark-mode #contact form input[type="submit"]:hover{
+  background: black;
+}
+
+/* Dark mode button */
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(57, 54, 54);
+  font-size: 1em;
+  margin-top: 3px;
+  padding: 0;
+}
+
+#dark-mode-toggle i {
+  transition: color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle i {
+  color: yellow; /* Change icon color in dark mode */
 }
